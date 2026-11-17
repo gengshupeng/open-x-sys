@@ -1,6 +1,6 @@
 <div align="center">
 
-# OpenXSys: Give your AI top-tier systems thinking!
+# OpenXSys: A Skill that gives your AI top-tier systems thinking!
 
 From understanding one company to researching an entire industry. Bring first principles, systems science and great practitioners’ ways of thinking to the systems behind what you see.
 
