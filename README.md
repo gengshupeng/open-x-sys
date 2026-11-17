@@ -16,7 +16,7 @@ AI handles the complexity. You own the possibilities.
 [![Agent Skills](https://img.shields.io/badge/hosts-Agent_Skills-5b698b)](docs/INSTALL.md#tools)
 [![Version](https://img.shields.io/badge/version-0.0.1--alpha.1-68777b)](#status)
 
-[⚡ Ask your AI to install](#start) · [✨ See an actual result](#examples) · [Try one sentence](#try) · [What makes it different](#different) · [The methods](#methods) · [Project structure](#docs) · [Chinese](README.zh-CN.md)
+[⚡ Ask your AI to install](#start) · [✨ See an actual result](#examples) · [Try one sentence](#try) · [What makes it different](#different) · [The methods](#methods) · [Project structure](#docs) · [Website](https://openxsys.com/?lang=en) · [Chinese](README.zh-CN.md)
 
 </div>
 
@@ -42,9 +42,9 @@ In this actual run, the author gave the AI one prompt:
 
 The AI produced an explorable industry-research page. It connects applications, models, cloud, chips, memory, packaging and power as one system, follows money flows and capital loops, examines profit and constraints, and explores four future scenarios. The page includes interactive charts, its method route, monitoring signals, discovery cards and a source index.
 
-[![AI Industry Core Sample: a complete systems study produced from one prompt, with industry layers, a method route and an explorable research page](assets/readme/ai-industry.en.png)](gallery/ai-industry/index.en.html)
+[![AI Industry Core Sample: a complete systems study produced from one prompt, with industry layers, a method route and an explorable research page](assets/readme/ai-industry.en.png)](https://openxsys.com/gallery/ai-industry/index.en.html)
 
-[📥 Download the bilingual report and open it in a browser](gallery/ai-industry/ai-industry-bilingual.zip?raw=true) · [English HTML](gallery/ai-industry/index.en.html) · [Chinese HTML](gallery/ai-industry/index.html) · [About this run](gallery/ai-industry/README.md)
+[📥 Download the bilingual report and open it in a browser](gallery/ai-industry/ai-industry-bilingual.zip?raw=true) · [English HTML](https://openxsys.com/gallery/ai-industry/index.en.html) · [Chinese HTML](https://openxsys.com/gallery/ai-industry/index.html) · [About this run](gallery/ai-industry/README.md)
 
 *Actual run date: 2026-11-16. The complete report is available in both languages; switch at the top while keeping the current section. Data and source dates are in the report.*
 

@@ -16,7 +16,7 @@
 [![Agent Skills](https://img.shields.io/badge/hosts-Agent_Skills-5b698b)](docs/INSTALL.zh-CN.md#tools)
 [![Version](https://img.shields.io/badge/version-0.0.1--alpha.1-68777b)](#status)
 
-[⚡ 交给 AI 安装](#start) · [✨ 看真实成果](#examples) · [一句话试用](#try) · [为什么不同](#different) · [方法体系](#methods) · [项目结构](#docs) · [English](README.md)
+[⚡ 交给 AI 安装](#start) · [✨ 看真实成果](#examples) · [一句话试用](#try) · [为什么不同](#different) · [方法体系](#methods) · [项目结构](#docs) · [官网](https://openxsys.com/?lang=zh) · [English](README.md)
 
 </div>
 
@@ -42,9 +42,9 @@
 
 AI 随后交付了一份可探索的产业研究网页：把应用、模型、云、芯片、存储、封装与电力连成一个系统，追踪资金流与资本循环，分析利润、约束和变化，并展开四种未来情景。页面包含交互图表、方法路线、观察信号、发现卡和来源索引。
 
-[![AI 产业岩芯：一句话产生的完整系统研究，展示产业结构、方法路线与可探索的研究页面](assets/readme/ai-industry.zh-CN.png)](gallery/ai-industry/index.html)
+[![AI 产业岩芯：一句话产生的完整系统研究，展示产业结构、方法路线与可探索的研究页面](assets/readme/ai-industry.zh-CN.png)](https://openxsys.com/gallery/ai-industry/index.html)
 
-[📥 下载双语报告，解压后用浏览器打开](gallery/ai-industry/ai-industry-bilingual.zip?raw=true) · [中文 HTML](gallery/ai-industry/index.html) · [English HTML](gallery/ai-industry/index.en.html) · [这次运行的说明](gallery/ai-industry/README.zh-CN.md)
+[📥 下载双语报告，解压后用浏览器打开](gallery/ai-industry/ai-industry-bilingual.zip?raw=true) · [中文 HTML](https://openxsys.com/gallery/ai-industry/index.html) · [English HTML](https://openxsys.com/gallery/ai-industry/index.en.html) · [这次运行的说明](gallery/ai-industry/README.zh-CN.md)
 
 *实际运行日期：2026-11-16。完整双语报告可在页首切换语言，并保留当前章节。数据与来源时点见报告。*
 
