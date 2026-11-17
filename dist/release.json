@@ -1,0 +1,20 @@
+{
+    "version":  "0.0.1-alpha.1",
+    "label":  "0.0.1 Alpha Preview",
+    "packages":  [
+                     {
+                         "file":  "open-x-sys.zip",
+                         "language":  "en",
+                         "version":  "0.0.1-alpha.1",
+                         "files":  82,
+                         "sha256":  "bad6ccf4f10158a334445ee62e0ba504d3ea659f36410962e4f792a950e758f1"
+                     },
+                     {
+                         "file":  "open-x-sys.zh-CN.zip",
+                         "language":  "zh-CN",
+                         "version":  "0.0.1-alpha.1",
+                         "files":  82,
+                         "sha256":  "ef26caab1ad72a0e54ac3251988cbcbd1d03e22b8ea03654d80a8b228c8fac9c"
+                     }
+                 ]
+}

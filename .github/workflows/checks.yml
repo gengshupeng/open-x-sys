@@ -1,0 +1,24 @@
+name: Release checks
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Check both Skills and checker fixtures
+        shell: pwsh
+        run: ./scripts/check-loading.ps1 -SelfTest
+      - name: Check public source, links, versions and packages
+        shell: pwsh
+        run: ./scripts/check-release.ps1
+      - name: Exercise ZIP folder import, replacement and removal
+        shell: pwsh
+        run: ./scripts/test-install.ps1
+  shell-install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Exercise ZIP folder import, replacement and removal in shell
+        run: sh scripts/test-install.sh

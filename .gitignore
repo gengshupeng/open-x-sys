@@ -1,0 +1,16 @@
+# Local AI sessions and personal systems
+.claude/
+.codex/
+.openxsys/
+.env
+.env.*
+!.env.example
+node_modules/
+__pycache__/
+*.pyc
+_site/
+.DS_Store
+Thumbs.db
+*.log
+skills/*/deps/installed.json
+skills/*/display/lib/
