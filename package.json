@@ -1,0 +1,45 @@
+{
+  "name": "open-x-sys",
+  "version": "0.0.1-alpha.1",
+  "description": "Give your AI top-tier systems thinking! A complete bilingual Agent Skill grounded in systems science.",
+  "license": "MIT",
+  "author": "OpenXSys Contributors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openxsys/open-x-sys.git"
+  },
+  "keywords": [
+    "openxsys",
+    "agent-skills",
+    "systems-thinking",
+    "systems-science",
+    "ai",
+    "skill"
+  ],
+  "files": [
+    "skills/",
+    "dist/",
+    "docs/",
+    "assets/",
+    "gallery/",
+    "academy/",
+    "evals/",
+    "playground/",
+    "practices/",
+    "x-sys/",
+    "site/",
+    "scripts/",
+    "README.zh-CN.md",
+    "CHANGELOG.md",
+    "CHANGELOG.zh-CN.md",
+    "CONTRIBUTING.md",
+    "CONTRIBUTING.zh-CN.md",
+    "VERSION",
+    "index.html"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public",
+    "tag": "alpha"
+  }
+}
