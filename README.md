@@ -63,7 +63,7 @@ Try an industry, company, technology or social phenomenon you care about. Start 
 Copy this prompt into your AI. It includes the project address; you can also attach the [complete English skill package](dist/open-x-sys.zip?raw=true):
 
 ```text
-Please install OpenXSys Skill from https://github.com/openxsys/open-x-sys
+Please install OpenXSys Skill from https://github.com/gengshupeng/open-x-sys
 Use the installation method for the AI tool you are running in, install the complete English edition, and check that it is available.
 Tell me when it is ready. I will then ask my own question.
 ```
