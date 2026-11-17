@@ -60,10 +60,10 @@ AI 随后交付了一份可探索的产业研究网页：把应用、模型、�
 
 ## ⚡ 交给你正在使用的 AI 安装
 
-把这个项目链接发给你的 AI，或下载[完整中文版技能包](dist/open-x-sys.zh-CN.zip?raw=true)交给它，再复制这段话：
+直接把下面这段话复制给你的 AI，里面已包含项目地址；也可以把[完整中文版技能包](dist/open-x-sys.zh-CN.zip?raw=true)交给它：
 
 ```text
-请帮我安装 OpenXSys。我已提供项目链接或完整技能包。
+请从项目仓库 https://github.com/openxsys/open-x-sys 安装 OpenXSys Skill。
 请根据你当前所在的 AI 工具，安装完整中文版并完成可用性检查。
 安装完成后告诉我已经准备就绪，我会直接说出自己的问题。
 ```

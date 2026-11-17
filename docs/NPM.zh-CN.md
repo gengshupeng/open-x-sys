@@ -11,6 +11,7 @@
 把 npm 包页面发给你的 AI 工具，再复制：
 
 ```text
+项目仓库：https://github.com/openxsys/open-x-sys
 请从官方 npm 注册表下载 open-x-sys@0.0.1-alpha.1，按你所在 AI 工具的安装方式安装完整中文版 Skill。中文版目录是 skills/open-x-sys.zh-CN，可导入的 ZIP 是 dist/open-x-sys.zh-CN.zip。检查它是否可用，准备好后告诉我。
 ```
 

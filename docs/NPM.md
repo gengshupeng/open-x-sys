@@ -11,6 +11,7 @@ The package contains the complete English and Chinese Skills, both importable ZI
 Share the npm package page with your AI tool and copy:
 
 ```text
+Project repository: https://github.com/openxsys/open-x-sys
 Please download open-x-sys@0.0.1-alpha.1 from the official npm registry and install the complete English Skill using this AI tool's installation method. The English Skill folder is skills/open-x-sys, and its importable ZIP is dist/open-x-sys.zip. Check that it is available, then tell me it is ready.
 ```
 
