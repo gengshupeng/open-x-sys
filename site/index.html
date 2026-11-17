@@ -17,6 +17,7 @@
     <a href="#proof"><span data-l="en">See the result</span><span data-l="zh">看看成果</span></a>
     <a href="#possibilities"><span data-l="en">What you can do</span><span data-l="zh">你可以做什么</span></a>
     <a href="#community"><span data-l="en">Share your work</span><span data-l="zh">分享作品</span></a>
+    <a class="github-link" href="https://github.com/openxsys/open-x-sys" target="_blank" rel="noopener noreferrer" aria-label="OpenXSys on GitHub">GitHub ↗</a>
     <button class="lang" id="lang" type="button" aria-label="Switch language">Chinese</button>
     <a class="nav-cta" href="#install-skill"><span data-l="en">Get Skill ↗</span><span data-l="zh">安装 Skill ↗</span></a>
   </nav>
@@ -91,7 +92,7 @@
 </div></section>
 <section class="deeper"><div class="wrap"><p><span data-l="en">Curious about how the thinking works? Explore the methods and compose your own routes.</span><span data-l="zh">想进一步了解 AI 怎样思考，或者亲自组合方法？可以继续深入探索。</span></p><a id="explore-link" href="explore.html"><span data-l="en">Explore the thinking ↗</span><span data-l="zh">深入探索 ↗</span></a></div></section>
 </main>
-<footer><div class="wrap"><b><span data-l="en">Open a system for anything. Open a system for yourself.</span><span data-l="zh">给任何事物，开启一个系统。给自己，开启一个系统。</span></b><div class="links"><a id="readme-link" href="../README.md"><span data-l="en">Project documentation</span><span data-l="zh">项目文档</span></a> · MIT · #OpenXSys</div></div></footer>
+<footer><div class="wrap"><b><span data-l="en">Open a system for anything. Open a system for yourself.</span><span data-l="zh">给任何事物，开启一个系统。给自己，开启一个系统。</span></b><div class="links"><a href="https://github.com/openxsys/open-x-sys" target="_blank" rel="noopener noreferrer">GitHub ↗</a> · <a id="readme-link" href="https://github.com/openxsys/open-x-sys/blob/main/README.md"><span data-l="en">Project documentation</span><span data-l="zh">项目文档</span></a> · MIT · #OpenXSys</div></div></footer>
 <script>
 (function(){
   "use strict";
@@ -121,7 +122,7 @@
     $("package-link").href="../dist/open-x-sys"+suffix+".zip";
     $("install-guide").href="../docs/INSTALL"+suffix+".md";
     $("share-guide").href="../gallery/README"+suffix+".md#share-your-work";
-    $("readme-link").href="../README"+suffix+".md";
+    $("readme-link").href="https://github.com/openxsys/open-x-sys/blob/main/README"+suffix+".md";
     $("explore-link").href="explore.html?lang="+lang;
     document.querySelectorAll("[data-report-link]").forEach(function(a){a.href="../gallery/ai-industry/"+(zh?"index.html":"index.en.html");});
     $("proof-shot").src="../assets/readme/ai-industry."+(zh?"zh-CN":"en")+".png";
