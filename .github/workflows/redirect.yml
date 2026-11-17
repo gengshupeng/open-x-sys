@@ -1,0 +1,32 @@
+name: Publish domain redirect
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pages-redirect
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          repository: openxsys/openxsys.github.io
+          ref: main
+          persist-credentials: false
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: redirects
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment
