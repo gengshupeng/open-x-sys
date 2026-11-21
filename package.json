@@ -1,41 +1,46 @@
 {
   "name": "open-x-sys",
-  "version": "0.0.1-alpha.1",
-  "description": "Give your AI top-tier systems thinking! A complete bilingual Agent Skill grounded in systems science.",
+  "version": "0.1.0-alpha.1",
+  "description": "Bind a system to your AI tool. Use systems to understand systems, and use systems to build systems.",
   "license": "MIT",
   "author": "OpenXSys Contributors",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gengshupeng/open-x-sys.git"
   },
+  "homepage": "https://openxsys.com/",
+  "bugs": {
+    "url": "https://github.com/gengshupeng/open-x-sys/issues"
+  },
   "keywords": [
     "openxsys",
     "agent-skills",
     "systems-thinking",
     "systems-science",
+    "natural-language-runtime",
     "ai",
     "skill"
   ],
   "files": [
     "skills/",
     "dist/",
-    "docs/",
     "assets/",
-    "gallery/",
-    "academy/",
-    "evals/",
-    "playground/",
-    "practices/",
-    "x-sys/",
-    "site/",
-    "scripts/",
+    "docs/ARCHITECTURE.md",
+    "docs/ARCHITECTURE.zh-CN.md",
+    "docs/INSTALL.md",
+    "docs/INSTALL.zh-CN.md",
+    "docs/OPEN-X-SYS-DRAFT.md",
+    "docs/OPEN-X-SYS-DRAFT.zh-CN.md",
+    "scripts/install.ps1",
+    "scripts/install.sh",
     "README.zh-CN.md",
     "CHANGELOG.md",
     "CHANGELOG.zh-CN.md",
     "CONTRIBUTING.md",
     "CONTRIBUTING.zh-CN.md",
-    "VERSION",
-    "index.html"
+    "SECURITY.md",
+    "SECURITY.zh-CN.md",
+    "VERSION"
   ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",

@@ -1,20 +1,19 @@
 {
-    "version":  "0.0.1-alpha.1",
-    "label":  "0.0.1 Alpha Preview",
+    "name":  "open-x-sys",
+    "version":  "0.1.0-alpha.1",
+    "license":  "MIT",
     "packages":  [
                      {
-                         "file":  "open-x-sys.zip",
-                         "language":  "en",
-                         "version":  "0.0.1-alpha.1",
-                         "files":  82,
-                         "sha256":  "bad6ccf4f10158a334445ee62e0ba504d3ea659f36410962e4f792a950e758f1"
+                         "edition":  "en-US",
+                         "package":  "open-x-sys-0.1.0-alpha.1-en-US.zip",
+                         "files":  153,
+                         "sha256":  "e3d0c1571d99c923e6703e6e9dac45781d23827029594e4651da95d92ff2b686"
                      },
                      {
-                         "file":  "open-x-sys.zh-CN.zip",
-                         "language":  "zh-CN",
-                         "version":  "0.0.1-alpha.1",
-                         "files":  82,
-                         "sha256":  "ef26caab1ad72a0e54ac3251988cbcbd1d03e22b8ea03654d80a8b228c8fac9c"
+                         "edition":  "zh-CN",
+                         "package":  "open-x-sys-0.1.0-alpha.1-zh-CN.zip",
+                         "files":  153,
+                         "sha256":  "b5800314908a1c527db7c60c2deb534bea6ca243118bafa7682e8c866b002fdf"
                      }
                  ]
 }

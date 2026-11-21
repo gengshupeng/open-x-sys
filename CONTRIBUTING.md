@@ -1,59 +1,65 @@
 # Contributing to OpenXSys
 
-[Chinese](CONTRIBUTING.zh-CN.md)
+[简体中文](CONTRIBUTING.zh-CN.md)
 
-The most valuable contribution is **a real result**: something you made with OpenXSys that surprised you, shared with the sentence that produced it, and an honest note on where it fell short.
+Thank you for building OpenXSys with us. An excellent question, a real work, a failure, a translation improvement, a new method, or a complete capability can take the system somewhere it could not reach before.
 
-## The contribution ladder
+## Choose the right entry
 
-Start anywhere. Each rung is a complete contribution.
+| What you are bringing | Begin here |
+| --- | --- |
+| A question, idea, architecture discussion, or roadmap proposal | [GitHub Discussions](https://github.com/gengshupeng/open-x-sys/discussions) |
+| A work or the story of a real run | [Discussions](https://github.com/gengshupeng/open-x-sys/discussions), using the work guide below |
+| A reproducible bug or compatibility problem | [Issue forms](https://github.com/gengshupeng/open-x-sys/issues/new/choose) |
+| A concrete improvement to public guidance, runtime, methods, adapters, or works | Fork the repository and open a pull request |
+| An unpatched security problem | Report it privately through [Security](SECURITY.md) |
 
-| Rung | What you add | Where it goes |
-|---|---|---|
-| **Share a deliverable** | A real deliverable, its share pack, the sentence that produced it, the model and host, the date | `gallery/` |
-| **Report a miss** | A run that went wrong: what you asked, what you got, what you expected | `evals/misses/` or an issue |
-| **Translate** | A page of the runtime or the docs, with identical structure and function IDs | `skills/open-x-sys.<lang>/` |
-| **Write a lesson or a profile** | One method explained in plain words, with a famous real case, the person behind it, the primary source and an exercise | `academy/` |
-| **Share a practice with its evidence** | A practice that worked for you, with its conditions, cost, results and switching conditions | `practices/` |
-| **Review a dependency or a Kit provider** | A dated review record following `skills/open-x-sys/kit/KIT.md` | `evals/reviews/` |
-| **Publish an ability or a personal route** | A capability or a route you built, with everything personal removed | `practices/` |
-| **Add a pattern** | A pattern with its source, how to recognize it, where it breaks, and real cases | `skills/open-x-sys/patterns/` |
-| **Make a style** | A style page that changes names, wording and sound only | `skills/open-x-sys/styles/` |
-| **Propose a method or a master route** | A Method Proposal (below) | an issue, then `skills/open-x-sys/methods/` or `routes/masters/` |
-| **Build an Open-X-Sys** | A domain system on the kernel | `x-sys/` |
-| **Improve the kernel** | A change to the runtime, with before-and-after runs | `skills/open-x-sys/` |
+A first contribution may begin in English or Chinese. Changes to formal Skill semantics or topology become one complete architecture in both editions before merge; maintainers and the community can help complete the other language.
 
-## Method Proposals
+## Principles
 
-The library is deliberately small. A new method or master route joins when it earns its place.
+- **Begin from a real failure.** State which request, subject, host, or condition exposed it.
+- **Change the right level.** Repeated lower-level problems point toward higher-level structure.
+- **Protect freedom.** Methods and cases strengthen judgment while open work remains free to compose its own path.
+- **Protect the experience.** The interior can grow more exact while what the user meets becomes simpler, more natural, and more powerful.
+- **Accept through evidence.** A capability arrives with a real sample, counterexample, or reproducible test; behavior matters.
+- **Maintain one product in two complete editions.** The public name is `open-x-sys`. English lives in `skills/open-x-sys/` and Chinese in `skills/open-x-sys.zh-CN/`, with the same architecture and capability.
 
-A proposal contains:
+## Before you begin
 
-1. **Name**, in plain words a newcomer understands at first sight, and a function ID.
-2. **Prompts**: the natural sentences people would say.
-3. **What it reveals or produces**, and which stage of the journey it belongs to.
-4. **Its source**: the person and the work, checked against a primary source. Say where the proposal simplifies it.
-5. **Why the existing methods do not already cover it.**
-6. **Three real runs** on different subjects, with their deliverables.
+1. Read [`SKILL.md`](skills/open-x-sys/SKILL.md), the [Skill README](skills/open-x-sys/README.md), and the [architecture](docs/ARCHITECTURE.md).
+2. Reproduce the issue with a real request. Record the input, environment, actual result, and expected difference.
+3. Locate the change in `core/`, `runtime/`, `system/`, `engines/`, `capabilities/`, `adapters/`, or `experience/`. Keep the main entry both complete and readable.
 
-For a master route, also: the steps in the practitioner's own order, and how each maps to OpenXSys methods.
+## Share an OpenXSys work
 
-## Rules for every contribution
+The next work that makes someone stop and look can come from you. It may be a discovery card, document, video, explorable page, tool, plan, or a new capability that already works in real life.
 
-- **Real outputs only.** No mock-ups, no reconstructed runs, no invented examples presented as real.
-- **Sources and dates.** Every factual claim has them. Uncertain attributions are marked until verified. No invented quotations.
-- **Natural language, purpose and quality bars.** Runtime pages state what and why. They never list steps to execute, and they contain no template to fill in.
-- **Plain, scientific wording.** No metaphors in the runtime. "[OpenXSys] Ding. System activated." is the only flourish.
-- **Every important document has a Chinese version.** The runtime is written in English first, then in a complete Chinese edition with identical structure and function IDs; a change to one edition comes with the same change to the other. Other important documents (README, this guide, the Playground, each folder's README) exist as `X.md` and `X.zh-CN.md`, linked to each other at the top.
-- **Each edition reads naturally on its own.** English documents use English throughout, including prompts, examples, navigation and labels. Translate Chinese-language source material into English for the English edition. Chinese documents use Chinese prose, with English terms or annotations where they help. Label links to records in another language clearly.
-- **Nothing personal.** Remove anything about a person before sharing. A personal root system is never shared.
-- **Neutral wording for people**: "the person", "they".
-- **Before changing the runtime**, read the project overview: `docs/OVERVIEW.md`. Run the release checks in docs/VALIDATION.md and include before-and-after examples for behavioral changes.
+Begin in [Discussions](https://github.com/gengshupeng/open-x-sys/discussions), where the work is easiest to see, discuss, and continue. Bring these together:
 
-## Reporting a problem with a dependency
+- **Your original words:** how you began in ordinary language;
+- **The work itself:** something people can open, watch, or use;
+- **The environment:** AI tool, model, OpenXSys version, and run date;
+- **The central discovery:** what changed your understanding of the subject;
+- **Real feedback:** what proved useful and what still failed to reach reality;
+- **The public boundary:** confirm that the work, material, and sources can be shared and contain no credentials or private information.
 
-Open an issue naming the dependency and what you saw. A reported item is pulled from the bundled set or the Kit pending review.
+When a work belongs in the formal playground, open a pull request and place it under `experience/playground/replays/<work-name>/` in the corresponding language Skill, with at least a short account and a directly usable result. The project can help an exceptional work open an entry in the other language.
 
-## License
+## After the change
 
-By contributing you agree that your contribution is licensed under the MIT License of this repository.
+When behavior changes, run at least one forward test on a real request that was not designed for the change. Inspect the final work and user experience, not only the runtime text. Describe the environment, input, result, and remaining problem in the pull request.
+
+## Content requirements
+
+- English and Chinese should each read as original product language and carry the same system semantics.
+- Distinguish facts, inferences, simulations, and examples; date and source time-sensitive material.
+- Every new runtime resource is reachable from `SKILL.md` through semantic indexes that name its entry signal, next resource, and return to the active system.
+- Runtime pages describe composable responsibilities and keep sequencing in the hands of the live system.
+- Directory changes preserve working content and update semantic indexes and every local link.
+- Credentials, private systems, real user data, generated caches, and test-output directories stay out of commits.
+- Third-party dependencies enter only with an inspectable source, license, version, purpose, and actual host availability.
+
+Before committing, confirm that `git diff` contains only the contribution and report the commands and results used to validate it.
+
+If you do not yet know which file should change, bring the real situation to Discussions first. OpenXSys contributions begin by seeing the real problem; the community can help find the level that should change.
