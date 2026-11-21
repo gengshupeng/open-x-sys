@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions, ideas, architecture, and works / 问题、想法、架构与作品
+    url: https://github.com/gengshupeng/open-x-sys/discussions
+    about: Begin a conversation, shape the roadmap, or show what OpenXSys made with you.
+  - name: Private security report / 私密安全报告
+    url: https://github.com/gengshupeng/open-x-sys/security/advisories/new
+    about: Report an unpatched vulnerability without disclosing it publicly.

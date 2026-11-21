@@ -1,0 +1,58 @@
+name: 报告 Bug
+description: 报告可复现的 OpenXSys 行为、安装或兼容问题。
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        谢谢你带回一次真实失效。使用问题、想法和作品请前往 GitHub Discussions。
+  - type: input
+    id: version
+    attributes:
+      label: OpenXSys 版本
+      placeholder: 0.1.0-alpha.1
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: AI 工具、模型与操作系统
+      placeholder: Codex / 模型 / Windows 11
+    validations:
+      required: true
+  - type: textarea
+    id: original
+    attributes:
+      label: 原始表达
+      description: 你当时对 AI 说了什么？
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际发生了什么？
+      description: 请提供最小复现步骤和相关输出。
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 你希望发生什么？
+    validations:
+      required: true
+  - type: textarea
+    id: material
+    attributes:
+      label: 复现材料
+      description: 可以附上最小项目、公开示例、截图或已经去掉私人信息的日志。
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 提交之前
+      options:
+        - label: 我已经移除密钥和私人材料。
+          required: true
+        - label: 我确认这是可复现问题，而不是一般使用问题或想法。
+          required: true

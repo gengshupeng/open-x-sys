@@ -1,103 +1,129 @@
 # 安装 OpenXSys
 
-[English](INSTALL.md) · [回到 README](../README.zh-CN.md)
+[English](INSTALL.md) · [返回中文 README](../README.zh-CN.md)
 
-## 交给你的 AI
+OpenXSys 提供中英文两个完整语言版本，拥有同一套运行架构。英文源目录是 `skills/open-x-sys/`，中文源目录是 `skills/open-x-sys.zh-CN/`；安装后的名字始终是 `open-x-sys`。核心不依赖 Node.js、Python、MCP 服务或第三方网页库；宿主已有的能力会在实际任务中按需接入。
 
-直接把下面这段提示词复制给你的 AI，里面已包含项目地址；也可以提供[完整中文版技能包](../dist/open-x-sys.zh-CN.zip?raw=true)：
+## 方式一：导入发行包
 
-```text
-请从项目仓库 https://github.com/gengshupeng/open-x-sys 安装 OpenXSys Skill。
-请根据你当前所在的 AI 工具，安装完整中文版并完成可用性检查。
-安装完成后告诉我已经准备就绪，我会直接说出自己的问题。
-```
+把[中文发行包](../dist/open-x-sys-0.1.0-alpha.1-zh-CN.zip)导入支持 Skill 的 AI 工具；英文用户可以选择[英文发行包](../dist/open-x-sys-0.1.0-alpha.1-en-US.zip)。压缩包根目录都是 `open-x-sys/`，其中直接包含 `SKILL.md` 与全部运行资料。
 
-安装之后，可以直接说：
+导入后确认工具能发现 `open-x-sys`，然后直接说：
 
 ```text
-用 OpenXSys，帮我研究人工智能这整个产业。
+用 OpenXSys，给我正在处理的这件事开启一个系统。
 ```
 
-也可以直接说自己的问题、发来材料，或者指定一家公司、一个项目、一项技术。试验场、方法组合与学习模式都可以在想进一步探索时使用。
+## 方式二：使用安装器
 
-<a id="tools"></a>
+安装器只复制本仓库的 Skill，不联网、不下载依赖、不读取密钥。目标目录中已有同名 Skill 时，默认停止；显式使用更新参数时，旧目录会先被改名保存，便于恢复。
 
-## 你正在使用的工具
-
-下面是给安装者查阅的入口。AI 根据当前工具提供的能力选择安装方式。
-
-| 工具 | 安装入口 |
-|---|---|
-| WorkBuddy | 在技能管理中导入完整技能包；也可交给具备文件安装能力的 AI 处理。[官方技能说明](https://cloud.tencent.com/document/product/1831/134432) |
-| 豆包工作 | 使用对话式安装或本地技能导入。[官方功能介绍](https://www.feishu.cn/content/article/7677519271848610746) |
-| DSH / DeepSeek Harness | 使用当前环境中的技能安装能力，或把完整目录放到当前实例实际扫描的 Skill 目录。[官方入口](https://www.deepseek.com/harness/zh/) |
-| Claude Code、Codex | 使用工具自己的 Skill 安装能力，或调用本仓库安装器，明确指定当前工具。 |
-| 其他支持 Skill 的 AI 工具 | 优先使用它的技能导入、安装或管理入口，保持整个技能目录的结构。 |
-
-当前阶段为 **Alpha Preview**。各工具的接入方式在这里汇总，实装与使用记录保存在 [evals](../evals/README.zh-CN.md)。
-
-## 给安装任务中的 AI
-
-### 识别当前环境
-
-从当前会话、工具信息和现有配置确认你所在的 AI 工具，以及它发现 Skill 的方式。多种 AI 工具可以安装在同一台电脑上，安装目标对应当前正在使用的工具。
-
-### 取得完整内容
-
-- 从项目中安装中文时，来源是 `skills/open-x-sys.zh-CN/`；英文是 `skills/open-x-sys/`。
-- 安装后的文件夹统一为 `open-x-sys/`，其中直接包含 `SKILL.md`、方法、路线、引擎、展示、系统与风格等完整子目录。
-- 试验场材料单独放在仓库中，用户想进一步探索时再使用。
-- 英文 ZIP 的根目录是 `open-x-sys/`；中文 ZIP 保留原包的 `open-x-sys.zh-CN/` 根目录。两包均含完整的 80 个运行时文件、版本信息与许可证，可直接选择对应 ZIP 导入。
-
-### 使用当前工具的安装方式
-
-工具有原生安装或导入能力时，直接使用它。可以访问本地文件的环境，也可以将完整目录复制到当前工具实际扫描的 Skill 位置。
-
-本仓库的安装器支持 Windows、macOS、Linux，以及自定义 Skill 目录。给自动化任务调用时，`-Yes` 或 `--yes` 让已指定的安装任务直接执行；`-Check` 或 `--check` 用于查看安装结果。参数说明与锁定依赖见 [DEPENDENCIES.md](../skills/open-x-sys.zh-CN/deps/DEPENDENCIES.md)。
-
-<details>
-<summary>脚本方式：给 AI 和开发者</summary>
-
-以下命令在仓库根目录执行。使用当前工具的名字；自定义目录时，把路径设为该工具实际扫描的 Skill 目录。
-
-```powershell
-# Windows：以 Codex 为例
-powershell -NoProfile -ExecutionPolicy Bypass -File skills/open-x-sys/deps/install.ps1 -HostName codex -Lang zh-CN -Yes
-
-# 已确认具体 Skill 目录时
-powershell -NoProfile -ExecutionPolicy Bypass -File skills/open-x-sys/deps/install.ps1 -Dir '<Skill directory>' -Lang zh-CN -Yes
-```
+### macOS / Linux
 
 ```sh
-# macOS / Linux：以 Claude Code 为例
-sh skills/open-x-sys/deps/install.sh --host claude-code --lang zh-CN --yes
+# 自动识别宿主，安装中文版
+sh scripts/install.sh --language zh-CN
 
-# 已确认具体 Skill 目录时
-sh skills/open-x-sys/deps/install.sh --dir '<Skill directory>' --lang zh-CN --yes
+# 安装英文版
+sh scripts/install.sh --language en-US
+
+# 指定宿主
+sh scripts/install.sh --host claude-code
+
+# 指定任意 Skill 目录
+sh scripts/install.sh --destination '/path/to/skills'
 ```
 
-</details>
+### Windows
 
-### 检查并交接给使用者
+```powershell
+# 自动识别用户级 Codex、Claude Code 或通用 Agent 目录，安装中文版
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/install.ps1 -Language zh-CN
 
-确认工具可以发现 `open-x-sys`，能读到 `SKILL.md` 及其支持文档。用本轮实际安装的位置与语言说明结果，告诉使用者现在可以直接提出自己的问题。
+# 安装英文版
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/install.ps1 -Language en-US
 
-OpenXSys 的文本主体可以先使用当前 AI 已有的能力。网页、图表、文档、视频等成果会结合现有工具与已安装技能制作；外部依赖的当前状态见 [依赖说明](../skills/open-x-sys.zh-CN/deps/DEPENDENCIES.md)。
+# 指定宿主
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/install.ps1 -HostName codex
 
-## 更新与卸载
-
-可以直接对 AI 说：
-
-```text
-帮我更新 OpenXSys，保留我的系统、个人偏好和已有成果。
+# 指定任意 Skill 目录
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/install.ps1 -Destination 'D:\path\to\skills'
 ```
 
-```text
-帮我卸载 OpenXSys，保留我的系统和已有成果。
+支持的宿主名：`codex`、`claude-code`、`agents`。自动识别不到时使用通用的 `~/.agents/skills`。
+
+## 方式三：手动复制
+
+将中文目录 [`skills/open-x-sys.zh-CN/`](../skills/open-x-sys.zh-CN/) 完整复制到 AI 工具实际扫描的 Skill 目录，并把安装目录命名为 `open-x-sys`。英文版位于 [`skills/open-x-sys/`](../skills/open-x-sys/)。方法、引擎、系统模型、试验场和参考资料共同构成完整能力。
+
+常见用户级目录：
+
+| 宿主 | Skill 目录 |
+| --- | --- |
+| Codex | `~/.codex/skills/` |
+| Claude Code | `~/.claude/skills/` |
+| 通用 Agent | `~/.agents/skills/` |
+
+不同版本的宿主可能允许项目级目录或自定义目录，以宿主当前文档和实际发现结果为准。
+
+## 检查
+
+```sh
+sh scripts/install.sh --check
 ```
 
-技能目录与使用者自己的 `.openxsys/`、工作文件和成果分别管理。安装器的 `-Uninstall` / `--uninstall` 用于移除安装的 Skill。
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/install.ps1 -Check
+```
 
-## 维护技能包
+检查会报告目标位置、安装版本与语言版本，并保持现有文件原样。
 
-在仓库根目录运行 `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/package-skill.ps1`，重新生成两种语言的 ZIP；加 `-Check` 逐文件核对包内内容与当前来源。
+## 更新
+
+```sh
+# 保持当前已安装的语言版本
+sh scripts/install.sh --update
+
+# 明确切换到中文版
+sh scripts/install.sh --language zh-CN --update
+```
+
+```powershell
+# 保持当前已安装的语言版本
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/install.ps1 -Update
+
+# 明确切换到中文版
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/install.ps1 -Language zh-CN -Update
+```
+
+更新只替换 Skill 本身。原 Skill 会保存在同级的时间戳备份目录中。用户自己的 `~/.openxsys/`、项目 `.openxsys/`、作品与数据不属于安装目录，永远不会被更新器覆盖。
+
+## 卸载
+
+```sh
+sh scripts/install.sh --uninstall
+```
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/install.ps1 -Uninstall
+```
+
+卸载采用可恢复方式：把 `open-x-sys` 移到同级的时间戳备份目录，而不是永久删除。用户系统与成果保持原样。
+
+## 校验下载
+
+[`SHA256SUMS`](../dist/SHA256SUMS) 给出当前安装包的 SHA-256。macOS / Linux：
+
+```sh
+cd dist
+shasum -a 256 -c SHA256SUMS
+```
+
+Windows：
+
+```powershell
+Get-FileHash -Algorithm SHA256 dist\open-x-sys-0.1.0-alpha.1-zh-CN.zip
+Get-FileHash -Algorithm SHA256 dist\open-x-sys-0.1.0-alpha.1-en-US.zip
+```
+
+将结果与 `dist/SHA256SUMS` 对照，即可确认下载的安装包与正式发布一致。

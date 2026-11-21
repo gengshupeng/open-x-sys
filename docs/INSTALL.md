@@ -1,103 +1,134 @@
 # Install OpenXSys
 
-[Chinese](INSTALL.zh-CN.md) · [Back to the README](../README.md)
+[简体中文](INSTALL.zh-CN.md) · [Back to README](../README.md)
 
-## Ask your AI
+OpenXSys ships as two complete language editions with one runtime architecture:
 
-Copy this prompt into your AI. It includes the project address; you can also attach the [complete English skill package](../dist/open-x-sys.zip?raw=true):
+- English: `skills/open-x-sys/`
+- Chinese: `skills/open-x-sys.zh-CN/`
+
+The installed Skill is always named `open-x-sys`. The core requires no Node.js, Python, MCP service, or third-party web library. Capabilities already present in the host connect when real work needs them.
+
+## Option 1: import a release package
+
+Import the edition you want into an AI tool that supports Skills:
+
+- [English package](../dist/open-x-sys-0.1.0-alpha.1-en-US.zip)
+- [Chinese package](../dist/open-x-sys-0.1.0-alpha.1-zh-CN.zip)
+
+Each archive has `open-x-sys/` at its root, with `SKILL.md` and the complete runtime inside.
+
+After import, confirm that the tool discovers `open-x-sys`, then say:
 
 ```text
-Please install OpenXSys Skill from https://github.com/gengshupeng/open-x-sys
-Use the installation method for the AI tool you are running in, install the complete English edition, and check that it is available.
-Tell me when it is ready. I will then ask my own question.
+Use OpenXSys to open a system for what I am working on.
 ```
 
-After installation, say:
+## Option 2: use the installer
 
-```text
-Use OpenXSys to research the entire artificial intelligence industry.
-```
+The installer copies the selected Skill from this repository. It fetches no dependency and reads no credential. When a same-name Skill already exists, installation reports it. Update preserves the previous directory as a timestamped backup.
 
-You can also ask your own question, share material, or name a company, project or technology. The Playground, method combinations and learn mode are there when you want to explore further.
-
-<a id="tools"></a>
-
-## The tool you already use
-
-These are entry points for the installer. The AI chooses an installation method using the capabilities of its current tool.
-
-| Tool | Installation entry |
-|---|---|
-| WorkBuddy | Import the complete package through skill management, or ask an AI with file-installation capabilities to handle it. [Official skill documentation](https://cloud.tencent.com/document/product/1831/134432) |
-| Doubao Work | Use conversational installation or local skill import. [Official feature overview](https://www.feishu.cn/content/article/7677519271848610746) |
-| DSH / DeepSeek Harness | Use the current environment's skill installation capabilities, or put the complete folder in a skill directory scanned by that instance. [Official entry](https://www.deepseek.com/harness/) |
-| Claude Code, Codex | Use the tool's own skill installation capabilities, or run this repository's installer with the current tool explicitly selected. |
-| Other AI tools with skill support | Use their skill import, installation or management entry, keeping the complete folder structure. |
-
-The project is in **Alpha Preview**. Installation entry points are collected here; installation and use records live in [evals](../evals/README.md).
-
-## For the AI carrying out installation
-
-### Identify the current environment
-
-Use the current session, tool information and existing configuration to establish which AI tool you are in and how it discovers skills. Several AI tools can be installed on the same computer; the installation target belongs to the one being used now.
-
-### Obtain the complete contents
-
-- The Chinese source is `skills/open-x-sys.zh-CN/`; the English source is `skills/open-x-sys/`.
-- The installed folder is named `open-x-sys/`, directly containing `SKILL.md` and the complete method, route, engine, display, system and style directories.
-- The repository's Playground is available separately when the person wants to explore it.
-- The English ZIP has an `open-x-sys/` root; the Chinese ZIP keeps the original `open-x-sys.zh-CN/` root. Both contain the complete 80-file runtime, release version and license. Select the corresponding ZIP when using a tool's local package importer.
-
-### Use the current tool's installation method
-
-Use native installation or import capabilities when available. In an environment with file access, the complete folder can also be copied into a skill directory actually scanned by the current tool.
-
-The repository installers support Windows, macOS, Linux and custom skill directories. For an installation task already specified, `-Yes` or `--yes` runs it without an interactive terminal prompt; `-Check` or `--check` reports installation state. Options and locked dependencies are described in [DEPENDENCIES.md](../skills/open-x-sys/deps/DEPENDENCIES.md).
-
-<details>
-<summary>Script installation: for AIs and developers</summary>
-
-Run these commands from the repository root. Select the current tool; for a custom directory, use the skill directory that tool actually scans.
-
-```powershell
-# Windows: Codex example
-powershell -NoProfile -ExecutionPolicy Bypass -File skills/open-x-sys/deps/install.ps1 -HostName codex -Yes
-
-# With a confirmed skill directory
-powershell -NoProfile -ExecutionPolicy Bypass -File skills/open-x-sys/deps/install.ps1 -Dir '<Skill directory>' -Yes
-```
+### macOS / Linux
 
 ```sh
-# macOS / Linux: Claude Code example
-sh skills/open-x-sys/deps/install.sh --host claude-code --yes
+# Detect the host; install English
+sh scripts/install.sh
 
-# With a confirmed skill directory
-sh skills/open-x-sys/deps/install.sh --dir '<Skill directory>' --yes
+# Install Chinese
+sh scripts/install.sh --language zh-CN
+
+# Select a host
+sh scripts/install.sh --host claude-code
+
+# Select any Skill directory
+sh scripts/install.sh --destination '/path/to/skills'
 ```
 
-</details>
+### Windows
 
-### Check and hand over
+```powershell
+# Detect Codex, Claude Code, or a general Agent directory; install English
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/install.ps1
 
-Check that the tool discovers `open-x-sys` and can read `SKILL.md` and its supporting documents. Report the actual installation location and language, and tell the person they can now ask their own question.
+# Install Chinese
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/install.ps1 -Language zh-CN
 
-The text-based core can use the AI capabilities already available. Pages, charts, documents and videos draw on existing tools and installed skills; the current external dependency status is in the [dependency guide](../skills/open-x-sys/deps/DEPENDENCIES.md).
+# Select a host
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/install.ps1 -HostName codex
 
-## Update and uninstall
-
-Ask your AI:
-
-```text
-Update OpenXSys, keeping my systems, preferences and existing deliverables.
+# Select any Skill directory
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/install.ps1 -Destination 'D:\path\to\skills'
 ```
 
-```text
-Uninstall OpenXSys, keeping my systems and existing deliverables.
+Supported host names are `codex`, `claude-code`, and `agents`. When no host directory exists yet, automatic detection uses `~/.agents/skills`.
+
+## Option 3: copy manually
+
+Copy the complete edition into the Skill directory scanned by the AI tool. Keep its installed folder name as `open-x-sys`.
+
+| Host | Common user Skill directory |
+| --- | --- |
+| Codex | `~/.codex/skills/` |
+| Claude Code | `~/.claude/skills/` |
+| General Agent | `~/.agents/skills/` |
+
+Host versions may also support project-level or custom directories. Use the host's current discovery behavior.
+
+## Check
+
+```sh
+sh scripts/install.sh --check
 ```
 
-The skill installation is managed separately from the person's `.openxsys/` directories, working files and deliverables. The installer's `-Uninstall` / `--uninstall` removes the installed skill.
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/install.ps1 -Check
+```
 
-## Maintain the packages
+The check reports the target location, installed version, and language edition without modifying files.
 
-From the repository root, run `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/package-skill.ps1` to regenerate both ZIPs. Add `-Check` to compare every packaged file with its current source.
+## Update
+
+```sh
+sh scripts/install.sh --update
+sh scripts/install.sh --language zh-CN --update
+```
+
+```powershell
+# Preserve the installed edition
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/install.ps1 -Update
+
+# Switch to or update Chinese
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/install.ps1 -Language zh-CN -Update
+```
+
+Update replaces only the installed Skill and preserves the prior directory beside it as `open-x-sys.backup-<timestamp>`. User-owned `~/.openxsys/`, project `.openxsys/`, works, and data live elsewhere.
+
+## Remove
+
+```sh
+sh scripts/install.sh --uninstall
+```
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/install.ps1 -Uninstall
+```
+
+Removal moves `open-x-sys` to `open-x-sys.removed-<timestamp>` so it can be restored. User systems and works remain where their owners placed them.
+
+## Verify downloads
+
+[`SHA256SUMS`](../dist/SHA256SUMS) lists both packages. On macOS or Linux, run:
+
+```sh
+cd dist
+shasum -a 256 -c SHA256SUMS
+```
+
+On Windows, run:
+
+```powershell
+Get-FileHash -Algorithm SHA256 dist\open-x-sys-0.1.0-alpha.1-en-US.zip
+Get-FileHash -Algorithm SHA256 dist\open-x-sys-0.1.0-alpha.1-zh-CN.zip
+```
+
+Compare the results with `dist/SHA256SUMS` to confirm that the downloaded packages match the release.

@@ -1,0 +1,58 @@
+name: Bug report
+description: Report a reproducible OpenXSys behavior, installation, or compatibility problem.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for bringing back a real failure. For questions, ideas, and works, use GitHub Discussions.
+  - type: input
+    id: version
+    attributes:
+      label: OpenXSys version
+      placeholder: 0.1.0-alpha.1
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: AI tool, model, and operating system
+      placeholder: Codex / model / Windows 11
+    validations:
+      required: true
+  - type: textarea
+    id: original
+    attributes:
+      label: Original request
+      description: What did you say to the AI?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What actually happened?
+      description: Include the smallest reproducible sequence and relevant output.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should have happened?
+    validations:
+      required: true
+  - type: textarea
+    id: material
+    attributes:
+      label: Reproduction material
+      description: Attach a minimal project, public example, screenshot, or logs with private data removed.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I removed credentials and private material.
+          required: true
+        - label: I checked that this is a reproducible problem rather than a general question or idea.
+          required: true
