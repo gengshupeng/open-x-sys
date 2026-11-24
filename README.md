@@ -491,3 +491,13 @@ Let AI carry the complexity. Let people own the possibility. Let systems connect
 ⭐ Star OpenXSys · Share your first discovery with **#OpenXSys** · Bring back the next work that changes how people see
 
 </div>
+
+## Star History
+
+<a href="https://www.star-history.com/?repos=gengshupeng%2Fopen-x-sys&type=date&legend=top-left">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=gengshupeng/open-x-sys&type=date&theme=dark&legend=top-left" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=gengshupeng/open-x-sys&type=date&legend=top-left" />
+    <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=gengshupeng/open-x-sys&type=date&legend=top-left" />
+  </picture>
+</a>

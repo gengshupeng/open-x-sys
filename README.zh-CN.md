@@ -527,3 +527,13 @@ OpenXSys 要进入更多真实的人、对象、AI 工具、电脑环境和外�
 ⭐ 为 OpenXSys 点亮一颗星 · 用 **#OpenXSys** 分享你的第一个发现 · 把下一件真正改变认识的作品带回来
 
 </div>
+
+## Star 趋势
+
+<a href="https://www.star-history.com/?repos=gengshupeng%2Fopen-x-sys&type=date&legend=top-left">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=gengshupeng/open-x-sys&type=date&theme=dark&legend=top-left" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=gengshupeng/open-x-sys&type=date&legend=top-left" />
+    <img alt="OpenXSys 的 GitHub Star 趋势图" src="https://api.star-history.com/chart?repos=gengshupeng/open-x-sys&type=date&legend=top-left" />
+  </picture>
+</a>
